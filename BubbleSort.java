@@ -22,8 +22,8 @@ public class BubbleSort {
                 }
             }
         }
-        for (int a : array){
-            System.out.print(a + " ");
+        for (int element : array){
+            System.out.println(element);
         }
     }
 }
