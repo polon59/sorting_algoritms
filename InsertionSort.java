@@ -1,48 +1,41 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 public class InsertionSort {
     
         public static void main(String[] args) {
             InsertionSort insertionSort = new InsertionSort();
-            ArrayList<Integer> list = new ArrayList<Integer>();
             int[] array = {13,5,6,11,4,15,143,333,7,8,88,2};
 
             for (int number : array){
-                list.add(number);
-            }
-
-            for (int element : list){
-                System.out.println(element);
+                System.out.println(number);
             }
             
-            insertionSort.handleSort(list);
+            insertionSort.handleSort(array);
         }
     
-
-
-    
-        public void handleSort(ArrayList<Integer> list){
+        public void handleSort(int[] array){
             int temporary = 0;
-            int a = 0; // next element
-    
-            for (int i = 0; i < list.size()-1; i++){
-                    a = i+1;
-                while (a < list.size()){
+            int nextIndex;
 
-                    if (list.get(i) > list.get(a)){
-                        Collections.swap(list, i, a);
+            for (int index = 0; index < array.length; index++){
+                nextIndex = index+1;
+
+                while(nextIndex < array.length){
+                    if (array[index] > array[nextIndex]){
+                        temporary = array[index];
+                        array[index] = array[nextIndex];
+                        array[nextIndex] = temporary;
                     }
-                    a++;
+                    nextIndex++;
                 }
-                
             }
 
-
-
-            for (int element : list){
+            //print sorted list
+            for (int element : array){
                 System.out.println(element);
             }
         }
+
+    
     }
+
+    
