@@ -2,7 +2,7 @@
 This optimized version bubblesort algorithm. 
 It detects if needs to stop the loop if array is sorted.
 */
-public class BubbleSort {
+public class BubbleSortOptimimized {
     
         public static void main(String[] args) {
             BubbleSort bubbleSort = new BubbleSort();
@@ -26,11 +26,9 @@ public class BubbleSort {
                         swapped = true;
                     }
                 }
-
                 if(!swapped){
                     break;
                 }
-
             }
 
             //printing sorted array
